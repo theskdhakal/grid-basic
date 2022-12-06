@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  background: rgb(161, 95, 15);
+  font-size: 3rem;
+}
+
+.wrapper {
+  background: blue;
+  min-height: 80vh;
+
+  /* grid system  */
+
+  display: grid;
+  gap: 2rem;
+
+  min-height: 90vh;
+  padding: 1rem;
+
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: auto auto auto; */
+
+  grid-template-areas:
+    "i1 i1 " /* define a row */
+    "i4 i5 "
+    "i6 i6 "
+    "i7 i8 "
+    "i9 i9"
+    "i2 i2";
+}
+
+.wrapper > div {
+  background: orange;
+  min-height: 70px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-1 {
+  /* grid-row-start:1;
+    grid-row-end:2; */
+
+  /* grid-row: 2/4;
+  grid-column: 3/4;
+*/
+  grid-area: i1;
+}
+
+.item-2 {
+  height: 50px;
+  width: 50px;
+  grid-area: i2;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.item-3 {
+  grid-area: i3;
+}
+.item-4 {
+  grid-area: i4;
+}
+.item-5 {
+  grid-area: i5;
+}
+.item-6 {
+  grid-area: i6;
+}
+.item-7 {
+  grid-area: i7;
+}
+.item-8 {
+  grid-area: i8;
+}
+.item-9 {
+  grid-area: i9;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  background: green;
+  border-radius: 50%;
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+}
